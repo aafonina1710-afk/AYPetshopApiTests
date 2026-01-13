@@ -1,8 +1,6 @@
 import allure
 import requests
 
-
-
 BASE_URL = "http://5.181.109.28:9090/api/v3"
 
 @allure.feature("Pet")
@@ -16,7 +14,7 @@ class TestPet:
             assert response.status_code == 200, "Код ответа не совпал с ожидаемым"
 
         with allure.step("Проверка текстового значения поля"):
-            assert response.text == "Pet deleted", "Текст ошибки не совпал с ожижаемым"
+            assert response.text == "Pet deleted", "Текст ошибки не совпал с ожидаемым"
 
 
 
